@@ -4,8 +4,8 @@
 - [BMR](#bmr-basal-metabolic-rate)
 - [TDEE](#tdee-total-daily-energy-expenditure)
   - [Target](#target)
-- [Macro](#macro-macronutrient)
-  - [Carb](#carb)
+- [Macro](#macro-macronutrients)
+  - [Carb](#carb-carbohydrateb)
   - [Protein](#protein)
   - [Fat](#fat)
 - [Macro Cheat Sheet](#macro-cheat-sheet)
@@ -36,7 +36,6 @@
 - Is a crucial factor when considering caloric intake for weight management.
 - Represents the total number of calories an individual burns in a day, taking into account their Basal Metabolic Rate (BMR), physical activity, and the thermic effect of food.
 - Formula:
-
   ```bash
   TDEE = ${BMR} * ${Activity Multipliers}
   ```
@@ -80,7 +79,6 @@
 - [Suggested range](https://pubmed.ncbi.nlm.nih.gov/24864135) for `Amount of Protein` intake is around `2.3g` to `3.1g` of protein per 1kg of body weight.
 - 1g protein = 4 calories
 - Formula:
-
   ```bash
   Protein(g) = ${TDEE Target} * ${Macro Protein Percent} / 4
   ```
