@@ -58,15 +58,16 @@
 - Deficit & Surplus range: 100 ~ 500 calories
 - Recommended: `250` calories
 
-## Macro (Macronutrient)
+## Macro (Macronutrients)
 
 - Are essential nutrients that the body requires in relatively large amounts to function properly.
 - Three main types of macronutrients: protein, carb, fat.
 - Recommended macro split: [40/30/30](https://www.ideafit.com/nutrition/the-science-behind-40-30-30)
 
-### Carb
+### Carb (Carbohydrate)
 
 - Primary source of energy for the body, especially the brain and muscles.
+- Three main types of carb: starch, sugar, fiber.
 - 1g carb = 4 calories
 - Formula:
   ```bash
