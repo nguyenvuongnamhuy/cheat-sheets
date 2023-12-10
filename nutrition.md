@@ -76,7 +76,7 @@
 ### Protein
 
 - Essential for building and repairing tissues, including muscles. It also plays a role in various physiological functions in the body.
-- Suggested range for `Amount of Protein` intake is around `2g` to `2.5g` of protein per 1kg of body weight.
+- [Suggested range](https://pubmed.ncbi.nlm.nih.gov/24864135) for `Amount of Protein` intake is around `2.3g` to `3.1g` of protein per 1kg of body weight.
 - 1g protein = 4 calories
 - Formula:
 
