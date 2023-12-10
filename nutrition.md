@@ -156,4 +156,44 @@
   </tbody>
 </table>
 
+## Calories Cheat Sheet
+
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Calories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Com tam suon trung</td><td>500</td>
+    </tr>
+    <tr>
+      <td>Bun</td><td>500</td>
+    </tr>
+    <tr>
+      <td>Xoi</td><td>500</td>
+    </tr>
+    <tr>
+      <td>Pho</td><td>450</td>
+    </tr>
+    <tr>
+      <td>Banh mi</td><td>400</td>
+    </tr>
+    <tr>
+      <td>Banh gio</td><td>400</td>
+    </tr>
+    <tr>
+      <td>Hu tieu</td><td>400</td>
+    </tr>
+    <tr>
+      <td>Chao</td><td>400</td>
+    </tr>
+    <tr>
+      <td>Banh bao</td><td>350</td>
+    </tr>
+  </tbody>
+</table>
+
 ---
