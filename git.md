@@ -11,6 +11,7 @@
     - [With repository](#with-gitlab-repositories--tutorial--install)
     - [With docker](#with-docker--tutorial)
   - [Commands](#commands)
+- [Use multiple account](#use-multiple-accounts-in-one-machine)
 
 # Git
 
@@ -143,6 +144,37 @@ Or
 
 ```bash
 cat /srv/gitlab-runner/config/config.toml
+```
+
+# Use multiple accounts in one machine
+
+1. Edit config file (~/.ssh/config)
+
+```bash
+Host github_1
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/private_key_1
+
+Host github_2
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/private_key_2
+```
+
+2. Add ssh private keys to agent
+
+```bash
+ssh-add ~/.ssh/private_key_1
+ssh-add ~/.ssh/private_key_2
+```
+
+3. Test connection
+
+```bash
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+ssh -T git@github_1
+ssh -T git@github_2
 ```
 
 ---
