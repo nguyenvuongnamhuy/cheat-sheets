@@ -47,4 +47,9 @@ Then right click on the gear icon, select "Allow Launching" and move this file t
 ~/.local/share/applications (local - optional)
 ```
 
+## Create usb boot
+
+- single OS: https://rufus.ie
+- multiple OS: https://www.ventoy.net
+
 ---
