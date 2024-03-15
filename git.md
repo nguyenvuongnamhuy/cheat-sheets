@@ -28,8 +28,22 @@ Insert into .git/config
 
 ## Show changes in untracked file
 
+Compare file changes
+
 ```bash
 git diff /path-of-file
+```
+
+Compare 2 branchs
+
+```bash
+git diff --color origin/${BRANCH_1} origin/${BRANCH_2}
+```
+
+Compare 2 branchs include hidden line endings ^M
+
+```bash
+git diff --color-words --word-diff-regex='[^[:space:]]|([[:space:]]+$)' origin/${BRANCH_1} origin/${BRANCH_2}
 ```
 
 ## Remove & delete all changes
