@@ -6,6 +6,7 @@
   - [Show changes in untracked file](#show-changes-in-untracked-file)
   - [Remove & delete all changes](#remove--delete-all-changes)
   - [Cherry-pick commit](#cherry-pick-commit)
+  - []()
 - [Gitlab Runner](#gitlab-runner)
   - [Install](#install)
     - [With repository](#with-gitlab-repositories--tutorial--install)
@@ -42,6 +43,20 @@ git clean -d -f
 ```bash
 git cherry-pick ${COMMIT_ID}
 git cherry-pick -m 1 ${COMMIT_ID}
+```
+
+## Configuring git to handle line endings
+
+Window
+
+```bash
+git config --global core.autocrlf true
+```
+
+MacOS
+
+```bash
+git config --global core.autocrlf input
 ```
 
 # Gitlab Runner
