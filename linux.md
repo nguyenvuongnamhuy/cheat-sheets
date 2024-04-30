@@ -267,6 +267,8 @@ sudo lsof -i -P -n | grep ${PORT}
 
 ## Kill
 
+### Single process
+
 ```bash
 sudo kill ${PID}
 ```
@@ -275,6 +277,12 @@ Or forces stop immediately. Unsaved progress will be lost
 
 ```bash
 sudo kill -9 ${PID}
+```
+
+### Multiple process
+
+```bash
+kill -9 $(lsof -ti:${PORT_1},${PORT_2},${PORT_3},...)
 ```
 
 # Network layer protocol
