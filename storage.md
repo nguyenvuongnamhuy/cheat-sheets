@@ -181,7 +181,7 @@ db.product.insertMany([
 
 ### Update
 
-Update one
+Update field values in document
 
 ```bash
 db.product.updateOne(
@@ -194,6 +194,20 @@ db.product.updateOne(
   }
 );
 ```
+
+Update new document
+
+```bash
+db.product.updateOne(
+  { name: "Test" },
+  { address: "TPHCM" }
+);
+```
+
+Example:
+
+- old document: { \_id: 123, name: "Alice", age: 30, email: "alice_updated@example.com" }
+- new document: { \_id: 123, address: "TPHCM" }
 
 ### Delete
 
