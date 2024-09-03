@@ -9,7 +9,7 @@
   - [Commands](#commands)
 - [MongoDB](#mongodb)
   - [Usage](#usage)
-  - [Command](#command)
+  - [Command](#commands-1)
   - [Save backup file](#save-backup-file-1)
   - [Restore to DB](#restore-to-db-1)
 
@@ -130,7 +130,7 @@ mongosh "mongodb://${USERNAME}:${PASSWORD}@${HOST}:${PORT}/"
 
 Example: `mongosh "mongodb://root:123456@localhost:27017/"`
 
-## Command
+## Commands
 
 ### Select database
 
@@ -144,7 +144,9 @@ use ${DATABASE_NAME};
 show collections;
 ```
 
-### Find query
+### Find
+
+Find all
 
 ```bash
 db.product.find().pretty();
@@ -153,6 +155,39 @@ db.product.find().pretty();
 ```bash
 db.product.find({ age: { $gte: 19 } }).pretty();
 ```
+
+Find one
+
+```bash
+db.product.findOne({ name: 'Huy' });
+```
+
+### Insert
+
+Insert one
+
+```bash
+db.product.insertOne({ name: "Test", age: 27 });
+```
+
+Insert many
+
+```bash
+db.product.insertMany([
+  { name: "Test1", age: 25 },
+  { name: "Test2", age: 30 },
+]);
+```
+
+### Update
+
+Update one
+TODO:
+
+### Delete
+
+Delete one
+TODO:
 
 ### Create index
 
