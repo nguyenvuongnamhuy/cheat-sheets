@@ -8,6 +8,8 @@
   - [Restore to DB](#restore-to-db)
   - [Commands](#commands)
 - [MongoDB](#mongodb)
+  - [Usage](#usage)
+  - [Command](#command)
   - [Save backup file](#save-backup-file-1)
   - [Restore to DB](#restore-to-db-1)
 
@@ -111,6 +113,52 @@ SELECT table_name, column_name, data_type FROM information_schema.columns WHERE 
 ```
 
 # MongoDB
+
+## Usage
+
+Install
+
+```bash
+brew install mongosh
+```
+
+Access
+
+```bash
+mongosh "mongodb://${USERNAME}:${PASSWORD}@${HOST}:${PORT}/"
+```
+
+Example: `mongosh "mongodb://root:123456@localhost:27017/"`
+
+## Command
+
+### Select database
+
+```bash
+use ${DATABASE_NAME};
+```
+
+### Show all collections
+
+```bash
+show collections;
+```
+
+### Find query
+
+```bash
+db.product.find().pretty();
+```
+
+```bash
+db.product.find({ age: { $gte: 19 } }).pretty();
+```
+
+### Create index
+
+```bash
+db.product.createIndex({ name: 1 });
+```
 
 ## Save backup file
 
