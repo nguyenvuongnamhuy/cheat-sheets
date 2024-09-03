@@ -206,7 +206,7 @@ db.product.updateOne(
 
 Example:
 
-- old document: { \_id: 123, name: "Alice", age: 30, email: "alice_updated@example.com" }
+- old document: { \_id: 123, name: "Test", age: 30, email: "test@example.com" }
 - new document: { \_id: 123, address: "TPHCM" }
 
 ### Delete
