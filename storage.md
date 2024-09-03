@@ -182,12 +182,26 @@ db.product.insertMany([
 ### Update
 
 Update one
-TODO:
+
+```bash
+db.product.updateOne(
+  { name: "Test" }, // conditions
+  {
+    $set: {
+      age: 30, // update old field
+      email: "test@example.com" // add new field
+    }
+  }
+);
+```
 
 ### Delete
 
 Delete one
-TODO:
+
+```bash
+db.product.deleteOne({ name: "Test2" });
+```
 
 ### Create index
 
