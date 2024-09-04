@@ -9,7 +9,16 @@
   - [Commands](#commands)
 - [MongoDB](#mongodb)
   - [Usage](#usage)
+    - [Install](#install)
+    - [Access](#access)
   - [Command](#commands-1)
+    - [Select database](#select-database)
+    - [List all collections](#list-all-collections)
+    - [Create index](#create-index)
+    - [Find](#find)
+    - [Insert](#insert)
+    - [Update](#update)
+    - [Delete](#delete)
   - [Save backup file](#save-backup-file-1)
   - [Restore to DB](#restore-to-db-1)
 
@@ -116,13 +125,13 @@ SELECT table_name, column_name, data_type FROM information_schema.columns WHERE 
 
 ## Usage
 
-Install
+#### Install
 
 ```bash
 brew install mongosh
 ```
 
-Access
+#### Access
 
 ```bash
 mongosh "mongodb://${USERNAME}:${PASSWORD}@${HOST}:${PORT}/"
@@ -138,15 +147,27 @@ Example: `mongosh "mongodb://root:123456@localhost:27017/"`
 use ${DATABASE_NAME};
 ```
 
-### Show all collections
+### List all collections
 
 ```bash
 show collections;
 ```
 
+### Create index
+
+```bash
+db.product.createIndex({ name: 1 });
+```
+
 ### Find
 
-Find all
+#### Find one
+
+```bash
+db.product.findOne({ name: 'Huy' });
+```
+
+#### Find all
 
 ```bash
 db.product.find().pretty();
@@ -156,21 +177,89 @@ db.product.find().pretty();
 db.product.find({ age: { $gte: 19 } }).pretty();
 ```
 
-Find one
+#### Left join
+
+One field
 
 ```bash
-db.product.findOne({ name: 'Huy' });
+db.user.aggregate([
+  {
+    $lookup: {
+      from: "laptop",
+      localField: "email",
+      foreignField: "email",
+      as: "user_laptop"
+    }
+  }
+])
+```
+
+Multiple fields
+
+```bash
+db.user.aggregate([
+  {
+    $lookup: {
+      from: "laptop",
+      let: { user_name: "$name", user_email: "$email" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $and: [
+                { $eq: ["$name", "$$user_name"] },
+                { $eq: ["$email", "$$user_email"] }
+              ]
+            }
+          }
+        }
+      ],
+      as: "user_laptop"
+    }
+  },
+])
+```
+
+#### Inner join
+
+```bash
+db.user.aggregate([
+  {
+    $lookup: {
+      from: "laptop",
+      let: { user_name: "$name", user_email: "$email" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $and: [
+                { $eq: ["$name", "$$user_name"] },
+                { $eq: ["$email", "$$user_email"] }
+              ]
+            }
+          }
+        }
+      ],
+      as: "user_laptop"
+    }
+  },
+  {
+    $match: {
+      user_laptop: { $ne: [] }
+    }
+  }
+])
 ```
 
 ### Insert
 
-Insert one
+#### One
 
 ```bash
 db.product.insertOne({ name: "Test", age: 27 });
 ```
 
-Insert many
+#### Many
 
 ```bash
 db.product.insertMany([
@@ -181,7 +270,7 @@ db.product.insertMany([
 
 ### Update
 
-Update field values in document
+#### Update field values in document
 
 ```bash
 db.product.updateOne(
@@ -195,7 +284,7 @@ db.product.updateOne(
 );
 ```
 
-Update new document
+#### Update new document
 
 ```bash
 db.product.updateOne(
@@ -211,16 +300,8 @@ Example:
 
 ### Delete
 
-Delete one
-
 ```bash
 db.product.deleteOne({ name: "Test2" });
-```
-
-### Create index
-
-```bash
-db.product.createIndex({ name: 1 });
 ```
 
 ## Save backup file
