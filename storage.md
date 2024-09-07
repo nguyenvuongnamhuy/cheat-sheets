@@ -177,6 +177,12 @@ db.product.find().pretty();
 db.product.find({ age: { $gte: 19 } }).pretty();
 ```
 
+Convert to array in NodeJS
+
+```bash
+db.product.find().toArray();
+```
+
 #### Left join
 
 One field
