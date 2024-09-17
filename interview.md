@@ -184,7 +184,10 @@
 - jwt
   - sử dụng thuật toán ký để tạo ra token dựa vào header, secret_key và payload
   - jwt.sign: tạo ra token dựa vào secret_key, payload càng lớn token càng dài
-  - jwt.verify: so sánh secret_key truyền vào trùng khớp với secret_key trong token -> return payload
+  - jwt.verify:
+    - so sánh secret_key truyền vào trùng khớp với secret_key trong token
+    - check expired time
+    -> return payload
 - bcrypt
   - bcrypt là một thuật toán mã hóa dùng để băm và kiểm tra mật khẩu một cách an toàn
   - bảo vệ mật khẩu người dùng bằng cách băm mật khẩu trước khi lưu trữ và sau đó so sánh giá trị băm khi xác thực
@@ -255,16 +258,18 @@
 # Dự án hiện tại
 
 - hiểu sâu về dự án đang làm
-- challenges về data:
-  - tạo queue bằng kafka thay vì bằng api do số lượng queue lớn
-  - replica db bằng debezium do muốn migrate hệ thống cũ sang hệ thống mới
-  - data thông qua quá nhiều 3rd party -> khác nhau
+- challenges về admin dashboard:
+  - truy vấn quá chậm do join nhiều bảng
+    - solution: đánh index, tối ưu hoá query, optimize logic code, cdc data sang table mới
 
 # Agile - scrum
 
 # Các câu hỏi mẫu phỏng vấn senior nodejs
 
 - index trong postgres ?
+  - b-tree
+  - unique
+  - compound
 - tối ưu performance dự án nodejs như thế nào ?
   - đánh index cho column
   - tối ưu hoá query (tránh dùng select \*, tránh join nhiều bảng) và đánh chỉ mục index cho colummn
@@ -277,5 +282,19 @@
   - sử dụng https
   - authenticate and authorize
   - sử dụng các Header bảo mật
+- init source cần làm những gì ?
+  - init source
+  - tạo structure
+    - router
+    - controller
+    - service
+    - repository
+    - database module
+    - middleware
+    - log module
+    - enviroment
+    - test
+    - CI/CD
+  - eslint, prettier
 
 ---
