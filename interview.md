@@ -258,6 +258,34 @@
 # Dự án hiện tại
 
 - hiểu sâu về dự án đang làm
+  - queue management
+    - tạo queue
+      - luồng esi
+        - nhận message từ kafka
+        - validate request master, doc type code và check type insert
+        - xử lý logic cho nhiều field
+        - sau đó lưu vào database
+          - doc_queue: master data (thông tin chung 1 queue)
+          - doc_queue_detail: detail data (lịch sử update queue)
+          - doc_queue_history: lịch sử phiên làm việc cuối cùng của queue (bao gồm thời gian work start, work end của user)
+      - luồng email
+        - nhận message từ API
+        - xử lý tương tự luồng esi
+    - timeleft
+      - bắn kafka message sau khi đã tạo queue
+      - xác định 12 điều kiện của booking number đó bên service khác
+      - mang đi tìm bộ rules tương ứng (bên iam service)
+      - sau đó tính timeleft cho tất cả các rules tương ứng
+      - xác định loại rule cần thiết cho booking number đó (same day, next day, since si receive)
+      - sau đó chọn ra 1 rule trong những rule cùng loại có deadline gần nhất và lưu vào database
+      - tính timeleft của tất cả queue khi load page
+      - recalculate timeleft của tất cả queue đang active
+    - authentication
+      - hiển thị tất cả booking number trên dashboard theo country go-live của user
+      - hiển thị theo 3 level theo account của user
+        - level 1: theo offshore (doc center id)
+        - level 2: theo team
+        - level 3: theo booking office
 - challenges về admin dashboard:
   - truy vấn quá chậm do join nhiều bảng
     - solution: đánh index, tối ưu hoá query, optimize logic code, cdc data sang table mới
