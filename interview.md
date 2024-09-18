@@ -350,5 +350,10 @@
     - test
     - CI/CD
   - eslint, prettier
+- scale ngang scale dọc micro service ?
+- nếu 1 service có nhiều instance thì quản lý database sao ?
+- cơ chế của consumer sử dụng là gì ?
+- cors là gì ?
+- postgres view là gì ?
 
 ---
