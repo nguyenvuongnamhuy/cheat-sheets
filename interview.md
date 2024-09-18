@@ -28,11 +28,12 @@
 
 # Introduce
 
-- Hi I'm Huy, I'm a candidate for the fullstack nodejs developer position
-- I have 5 years experiences programming in server site with javascript, nodejs and relative frameworks
-- Further more I also work in client site with reactjs but I prefer working at the server site
-- At work, I'm a responsible person, always try to complete tasks on time, no stop learning & researching about new technology
-- And a little bit of my personality, everyone told me that i'm a humorous and sociable person when outside of work
+- Hello I'm Huy, I'm a fullstack developer with 5 years experiences programming in javascript
+- I can work good at server site with nodejs and client site with reactjs
+- But I prefer working at the server site, maybe 70%
+- And a little bit of my personality, everyone told me that i'm a sociable person
+- But at work, I'm a responsible and serious person, I always try my best to complete tasks on time and use all of my knowledge to bring the highest value for the project
+- Further more, one of my interests is technology so I often use almost my free time to learn & research about new technology to improve my knowledge
 
 # Load balancing
 
