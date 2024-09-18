@@ -291,6 +291,8 @@
   - inquiry management
     - confirm với onshore/customer về SI trước khi xuất ra BL
     - cho phép offshore và onshore/customer trao đổi về các thông tin trên SI
+    - tạo trang admin để offshore quản lý các booking numbers
+    - tạo ra workspace để offshore/onshore/customer trao đổi với nhau
     - các chức năng chính:
       - luồng inquiry
         - offshore đặt câu hỏi
