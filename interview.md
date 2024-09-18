@@ -325,6 +325,7 @@
 - tối ưu performance dự án nodejs như thế nào ?
   - đánh index cho column
   - tối ưu hoá query (tránh dùng select \*, tránh join nhiều bảng) và đánh chỉ mục index cho colummn
+  - tránh sql injection
   - dùng caching (redis) để giảm tải truy vấn xuống database
   - dùng promise all
   - tối ưu hoá CPU
