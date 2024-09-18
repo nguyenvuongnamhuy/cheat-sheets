@@ -258,8 +258,9 @@
 # Dự án hiện tại
 
 - hiểu sâu về dự án đang làm
+  - tạo ra hệ thống để giúp offshore chuyển đổi từ SI -> BL
   - queue management
-    - tạo queue
+    - tạo queue (SI)
       - luồng esi
         - nhận message từ kafka
         - validate request master, doc type code và check type insert
@@ -280,12 +281,33 @@
       - sau đó chọn ra 1 rule trong những rule cùng loại có deadline gần nhất và lưu vào database
       - tính timeleft của tất cả queue khi load page
       - recalculate timeleft của tất cả queue đang active
+      - recalculate timeleft của tất cả queue mà có 1 trong 12 điều kiện bị thay đổi
     - authentication
       - hiển thị tất cả booking number trên dashboard theo country go-live của user
       - hiển thị theo 3 level theo account của user
         - level 1: theo offshore (doc center id)
         - level 2: theo team
         - level 3: theo booking office
+  - inquiry management
+    - confirm với onshore/customer về SI trước khi xuất ra BL
+    - cho phép offshore và onshore/customer trao đổi về các thông tin trên SI
+    - các chức năng chính:
+      - luồng inquiry
+        - offshore đặt câu hỏi
+        - gửi email
+        - onshore/customer trả lời
+        - offshore/onshore/customer mở lại câu hỏi
+        - offshore resolve
+        - offshore upload
+      - luồng amendment
+        - offshore tạo DraftBL để gửi cho customer confirm
+        - customer tạo sửa đổi (amendment)
+        - gửi email
+        - offshore trả lời
+        - offshore/customer mở lại câu hỏi
+        - offshore resolve
+        - offshore upload
+        - customer bấm confirm nếu mọi thứ ok -> tạo BL
 - challenges về admin dashboard:
   - truy vấn quá chậm do join nhiều bảng
     - solution: đánh index, tối ưu hoá query, optimize logic code, cdc data sang table mới
