@@ -65,7 +65,7 @@ Login to create account
 ## Switch another account with current config
 
 ```bash
-gcloud config set account user1@example.com
+gcloud config set account ${EMAIL}
 ```
 
 ## Configuration
