@@ -9,10 +9,10 @@
   - [List all](#list-all-activate-account)
   - [Create account](#create-account)
   - [Switch account](#switch-another-account-with-current-config)
-  - [Configuration](#configuration)
-    - [List all](#list-all-configs)
-    - [Create config](#create-config)
-    - [Switch config](#switch-another-config-with-current-account)
+- [Configuration](#configuration)
+  - [List all](#list-all-configs)
+  - [Create config](#create-config)
+  - [Switch config](#switch-another-config-with-current-account)
 - [Project](#project)
   - [List all projects](#list-all-projects)
   - [Switch project](#switch-project)
@@ -68,28 +68,44 @@ Login to create account
 gcloud config set account ${EMAIL}
 ```
 
-## Configuration
+# Configuration
 
-### List all configs
+## List all configs
 
 ```bash
 gcloud config configurations list
 ```
 
-### Create config
+## Create config
 
 should be username in email
 
 ```bash
-gcloud config configurations create ${USERNAME}
+gcloud config configurations create ${CONFIG_NAME}
 gcloud config set account ${EMAIL}
 gcloud config set project ${PROJECT_ID}
 ```
 
-### Switch another config with current account
+## Switch another config with current account
 
 ```bash
 gcloud config configurations activate ${USERNAME}
+```
+
+## Rename config
+
+at first, switch to another config before rename config
+
+```bash
+gcloud config configurations rename ${OLD_CONFIG_NAME} --new-name=${NEW_CONFIG_NAME}
+```
+
+## Delete config
+
+at first, switch to another config before delete config
+
+```bash
+gcloud config configurations delete ${CONFIG_NAME}
 ```
 
 # Project
