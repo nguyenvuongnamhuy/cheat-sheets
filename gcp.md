@@ -86,6 +86,12 @@ gcloud config set account ${EMAIL}
 gcloud config set project ${PROJECT_ID}
 ```
 
+## Show config detail
+
+```bash
+gcloud config list
+```
+
 ## Switch another config with current account
 
 ```bash
