@@ -12,7 +12,7 @@
 - [Configuration](#configuration)
   - [List all](#list-all-configs)
   - [Create config](#create-config)
-  - [Show config detail](#show-config-detail)
+  - [Show all properties of active config](#show-all-properties-of-active-config)
   - [Switch config](#switch-another-config-with-current-account)
   - [Rename config](#rename-config)
   - [Delete config](#delete-config)
@@ -89,7 +89,7 @@ gcloud config set account ${EMAIL}
 gcloud config set project ${PROJECT_ID}
 ```
 
-## Show config detail
+## Show all properties of active config
 
 ```bash
 gcloud config list
