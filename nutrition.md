@@ -5,7 +5,7 @@
 - [TDEE](#tdee-total-daily-energy-expenditure)
   - [Target](#target)
 - [Macro](#macro-macronutrients)
-  - [Carb](#carb-carbohydrateb)
+  - [Carb](#carb-carbohydrate)
   - [Protein](#protein)
   - [Fat](#fat)
 - [Macro Cheat Sheet](#macro-cheat-sheet)
