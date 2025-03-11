@@ -9,6 +9,7 @@
   - [Protein](#protein)
   - [Fat](#fat)
 - [Macro Cheat Sheet](#macro-cheat-sheet)
+- [Calories Cheat Sheet](#calories-cheat-sheet)
 
 ## General knowledge
 
@@ -36,6 +37,7 @@
 - Is a crucial factor when considering caloric intake for weight management.
 - Represents the total number of calories an individual burns in a day, taking into account their Basal Metabolic Rate (BMR), physical activity, and the thermic effect of food.
 - Formula:
+
   ```bash
   TDEE = ${BMR} * ${Activity Multipliers}
   ```
@@ -107,50 +109,50 @@
   <tbody>
     <tr>
       <td rowspan=2>Carbohydrates</td>
-      <td>100g com</td><td>30</td><td>3</td><td>1</td>
+      <td>100g cơm</td><td>30</td><td>3</td><td>1</td>
     </tr>
     <tr>
       <td>100g khoai lang</td><td>25</td><td>2</td><td>0.2</td>
     </tr>
     <tr>
       <td rowspan=7>Proteins</td>
-      <td>100g uc ga</td><td>0</td><td>32</td><td>4</td>
+      <td>100g ức gà</td><td>0</td><td>32</td><td>4</td>
     </tr>
     <tr>
-      <td>100g thit heo nac</td><td>0</td><td>31</td><td>4</td>
+      <td>100g thịt heo nạc</td><td>0</td><td>31</td><td>4</td>
     </tr>
     <tr>
-      <td>100g thit bo</td><td>0</td><td>25</td><td>15</td>
+      <td>100g thit bò</td><td>0</td><td>25</td><td>15</td>
     </tr>
     <tr>
-      <td>100g ca loc</td><td>1</td><td>25</td><td>5</td>
+      <td>100g cá lóc</td><td>1</td><td>25</td><td>5</td>
     </tr>
     <tr>
-      <td>100g tom</td><td>2</td><td>24</td><td>1</td>
+      <td>100g tôm</td><td>2</td><td>24</td><td>1</td>
     </tr>
     <tr>
-      <td>100g ca chep</td><td>0</td><td>22</td><td>4</td>
+      <td>100g cá chép</td><td>0</td><td>22</td><td>4</td>
     </tr>
     <tr>
-      <td>1 qua trung ga</td><td>0.6</td><td>7</td><td>5</td>
+      <td>1 quả trứng gà</td><td>0.6</td><td>7</td><td>5</td>
     </tr>
     <tr>
       <td rowspan=1>Fats</td>
-      <td>100g trai bo</td><td>10</td><td>3</td><td>80</td>
+      <td>100g trái bơ</td><td>10</td><td>3</td><td>80</td>
     </tr>
     <tr>
       <td rowspan=2>Vegetables</td>
-      <td>100g bong cai xanh</td><td>5</td><td>3</td><td>0.3</td>
+      <td>100g bông cải xanh</td><td>5</td><td>3</td><td>0.3</td>
     </tr>
     <tr>
-      <td>100g rau cai xanh</td><td>4</td><td>3</td><td>0.3</td>
+      <td>100g rau cải xanh</td><td>4</td><td>3</td><td>0.3</td>
     </tr>
     <tr>
     <td rowspan=2>Fruits</td>
-      <td>1 qua tao</td><td>24</td><td>0.5</td><td>0.2</td>
+      <td>1 quả táo</td><td>24</td><td>0.5</td><td>0.2</td>
     </tr>
     <tr>
-      <td>1 qua chuoi tieu</td><td>23</td><td>1.3</td><td>0.3</td>
+      <td>1 quả chuối tiêu</td><td>23</td><td>1.3</td><td>0.3</td>
     </tr>
   </tbody>
 </table>
@@ -166,31 +168,31 @@
   </thead>
   <tbody>
     <tr>
-      <td>Com tam suon trung</td><td>500</td>
+      <td>Cơm tấm sườn trứng</td><td>500</td>
     </tr>
     <tr>
-      <td>Bun</td><td>500</td>
+      <td>Bún bò / bún mọc / bún đậu mắm tôm / bún cá</td><td>500</td>
     </tr>
     <tr>
-      <td>Xoi</td><td>500</td>
+      <td>Xôi</td><td>500</td>
     </tr>
     <tr>
-      <td>Pho</td><td>450</td>
+      <td>Phở</td><td>450</td>
     </tr>
     <tr>
-      <td>Banh mi</td><td>400</td>
+      <td>Bánh mì</td><td>400</td>
     </tr>
     <tr>
-      <td>Banh gio</td><td>400</td>
+      <td>Bánh giò</td><td>400</td>
     </tr>
     <tr>
-      <td>Hu tieu</td><td>400</td>
+      <td>Hủ tiếu</td><td>400</td>
     </tr>
     <tr>
-      <td>Chao</td><td>400</td>
+      <td>Cháo</td><td>400</td>
     </tr>
     <tr>
-      <td>Banh bao</td><td>350</td>
+      <td>Bánh bao</td><td>350</td>
     </tr>
   </tbody>
 </table>
