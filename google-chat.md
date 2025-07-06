@@ -7,6 +7,13 @@
     - [To a space](#to-a-space)
     - [In a thread](#in-a-thread)
     - [With image](#with-image)
+    - [Format](#format)
+      - [Bold](#bold)
+      - [Italic](#italic)
+      - [Strikethrough](#strikethrough)
+      - [Code](#code)
+      - [Link](#link)
+      - [Code block](#code-block)
   - [Schedule a message](#schedule-a-message)
 
 # Webhook
@@ -72,6 +79,108 @@ curl -X POST 'webhook_url' \
 				]
 			}
 		],
+	}"
+```
+
+### Format
+
+- Standard Markdown syntax isn't supported for underline, text color, and bullet lists
+
+#### Bold
+
+```bash
+curl -X POST 'webhook_url' \
+	--header 'Content-Type: application/json' \
+	--data "{
+		\"text\": \"\*bold\*\"
+	}"
+```
+
+#### Italic
+
+```bash
+curl -X POST 'webhook_url' \
+	--header 'Content-Type: application/json' \
+	--data "{
+		\"text\": \"\_italic\_\"
+	}"
+```
+
+#### Strikethrough
+
+```bash
+curl -X POST 'webhook_url' \
+	--header 'Content-Type: application/json' \
+	--data "{
+		\"text\": \"\~strikethrough\~\"
+	}"
+```
+
+#### Code
+
+```bash
+curl -X POST 'webhook_url' \
+	--header 'Content-Type: application/json' \
+	--data "{
+		\"text\": \"\`code\`\"
+	}"
+```
+
+#### Link
+
+```bash
+curl -X POST 'webhook_url' \
+	--header 'Content-Type: application/json' \
+	--data "{
+		\"text\": \"https://example.com\"
+	}"
+```
+
+or with alias content
+
+```bash
+curl -X POST 'webhook_url' \
+	--header 'Content-Type: application/json' \
+	--data "{
+		\"cards\": [
+			{
+				\"sections\": [
+					{
+						\"widgets\": [
+							{
+								\"textParagraph\": {
+									\"text\": \"<a href=\'https://example.com\'>Click here</a>\"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}"
+```
+
+### Code block
+
+```bash
+curl -X POST 'webhook_url' \
+	--header 'Content-Type: application/json' \
+	--data "{
+		\"cards\": [
+			{
+				\"sections\": [
+					{
+						\"widgets\": [
+							{
+								\"textParagraph\": {
+									\"text\": \"<pre>Code\nBlock\nMultiple\nLines</pre>\"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
 	}"
 ```
 
