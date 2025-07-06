@@ -6,7 +6,7 @@
   - [Show changes in untracked file](#show-changes-in-untracked-file)
   - [Remove & delete all changes](#remove--delete-all-changes)
   - [Cherry-pick commit](#cherry-pick-commit)
-  - []()
+  - [Configuring git to handle line endings](#configuring-git-to-handle-line-endings)
 - [Gitlab Runner](#gitlab-runner)
   - [Install](#install)
     - [With repository](#with-gitlab-repositories--tutorial--install)
