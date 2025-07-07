@@ -5,9 +5,9 @@
 - [TDEE](#tdee-total-daily-energy-expenditure)
   - [Target](#target)
 - [Macro](#macro-macronutrients)
-  - [Carb](#carb-carbohydrate)
   - [Protein](#protein)
   - [Fat](#fat)
+  - [Carb](#carb-carbohydrate)
 - [Macro Cheat Sheet](#macro-cheat-sheet)
 - [Calories Cheat Sheet](#calories-cheat-sheet)
 
@@ -62,18 +62,8 @@
 ## Macro (Macronutrients)
 
 - Are essential nutrients that the body requires in relatively large amounts to function properly.
-- Three main types of macronutrients: protein, carb, fat.
+- Three main types of macronutrients: protein, fat, carb.
 - Recommended macro split: [40/30/30](https://www.ideafit.com/nutrition/the-science-behind-40-30-30)
-
-### Carb (Carbohydrate)
-
-- Primary source of energy for the body, especially the brain and muscles.
-- Three main types of carb: starch, sugar, fiber.
-- 1g carb = 4 calories
-- Formula:
-  ```bash
-  Carb(g) = ${TDEE Target} * ${Macro Carb Percent} / 4
-  ```
 
 ### Protein
 
@@ -81,6 +71,10 @@
 - [Suggested range](https://pubmed.ncbi.nlm.nih.gov/24864135) for `Amount of Protein` intake is around `2.3g` to `3.1g` of protein per 1kg of body weight.
 - 1g protein = 4 calories
 - Formula:
+  ```bash
+  Protein(g) = ${Weight(kg)} * ${Amount of Protein}
+  ```
+  or
   ```bash
   Protein(g) = ${TDEE Target} * ${Macro Protein Percent} / 4
   ```
@@ -92,6 +86,20 @@
 - Formula:
   ```bash
   Fat(g) = ${TDEE Target} * ${Macro Fat Percent} / 9
+  ```
+
+### Carb (Carbohydrate)
+
+- Primary source of energy for the body, especially the brain and muscles.
+- Three main types of carb: starch, sugar, fiber.
+- 1g carb = 4 calories
+- Formula:
+  ```bash
+  Carb(g) = (${TDEE Target} - (Protein * 4) - (Fat * 4)) / 4
+  ```
+  or
+  ```bash
+  Carb(g) = ${TDEE Target} * ${Macro Carb Percent} / 4
   ```
 
 ## Macro Cheat Sheet
