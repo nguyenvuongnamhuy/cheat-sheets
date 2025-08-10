@@ -37,6 +37,9 @@
 - [History command](#history-command)
 - [Show OS architecture](#show-os-architecture)
 - [Change user's password](#change-users-password)
+- [GUI Application](#gui-application)
+  - [Update Chrome](#update-chrome)
+  - [Create web shortcut on desktop](#create-web-shortcut-on-desktop)
 
 # User & Group
 
@@ -179,7 +182,7 @@ sudo mount ${DEVICE_PATH} ${ABSOLUTE_PATH}
 
 # Hardware Information
 
-## Listing Hard Drive 
+## Listing Hard Drive
 
 ```bash
 sudo fdisk -l
@@ -334,10 +337,43 @@ cat /home/${USERNAME}/.bash_history
 uname -a
 ```
 
-## Change user's password
+# Change user's password
 
 ```bash
 passwd
+```
+
+# GUI Application
+
+## Update Chrome
+
+```bash
+sudo apt update
+sudo apt upgrade google-chrome-stable
+```
+
+## Create web shortcut on desktop
+
+Create new file ${SHORTCUT_NAME}.desktop
+
+```bash
+# https://askubuntu.com/a/1296032
+[Desktop Entry]
+Name=${NAME}
+Comment=""
+Exec=google-chrome-stable ${LINK}
+Icon=/path-icon.png
+# create shortcut from the web to get the icon
+Icon=chrome-eilembjdkfgodjkcjnpgpaenohkicgjd-Default # or local path
+Terminal=false
+Type=Application
+```
+
+Then right click on the gear icon, select "Allow Launching" and move this file to
+
+```bash
+/usr/share/applications (global - required)
+~/.local/share/applications (local - optional)
 ```
 
 ---
