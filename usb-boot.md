@@ -30,7 +30,7 @@
 ## Window
 
 1. Plug the usb boot into the computer and start it up
-2. Enter menu boot (usually press F2, F10, F12, Esc, Del, ...)
+2. Enter menu boot (usually press Esc, F2, F10, F12, Del, ...)
 3. Prioritize usb boot first
 4. Select save & exit
 5. Wait for coming to Ventoy GUI
