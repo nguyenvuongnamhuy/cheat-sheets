@@ -31,8 +31,8 @@
 
 1. Plug the usb boot into the computer and start it up
 2. Enter menu boot (usually press Esc, F2, F10, F12, Del, ...)
-3. Prioritize usb boot first
-4. Select save & exit
+3. Prioritize usb boot first or select `UEFI: <usb-name>`
+4. Press Enver or select `Save & Exit`
 5. Wait for coming to Ventoy GUI
 6. Select file .iso need to install
 7. Follow the instructions
